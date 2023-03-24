@@ -14,6 +14,10 @@ environment running
 
 required : Node 16.11.0
 
+create a file .env in the root of the project and add the following lines
+
+    VITE_MORK=true
+
 You have to : 
 
     npm install

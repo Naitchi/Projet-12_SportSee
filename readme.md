@@ -1,6 +1,6 @@
-# Kasa
+# SportSee
 
-Projet 10 de la formation Développeur d'application web React d'OpenClassrooms
+Projet 12 de la formation Développeur d'application web React d'OpenClassrooms
 
 ## Getting Started
 

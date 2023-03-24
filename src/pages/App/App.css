@@ -80,6 +80,10 @@
         width: 965px;
     }
 
+    .top h1 {
+        font-size: 36px;
+    }
+
     .left {
         height: 590px;
     }

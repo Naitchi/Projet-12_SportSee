@@ -1,0 +1,24 @@
+.tooltip {
+    height: 63px;
+    width: 39px;
+    border-radius: 0px;
+    border: none !important;
+    box-shadow: none;
+    background: #E60000;
+    margin-left: 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.desc {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    text-align: center;
+
+    color: #FFFFFF;
+}

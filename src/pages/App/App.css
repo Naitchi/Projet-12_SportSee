@@ -1,0 +1,86 @@
+.App {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    width: 1124px;
+    margin-left: 117px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlight {
+    color: red;
+}
+
+.top {
+    height: 89px;
+    width: 1124px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 91px;
+    margin-left: 117px
+}
+
+.top h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+
+    /* TODO: échanger les deux pour le lightmode*/
+    color: white;
+    /*color: #000000;*/
+}
+
+.top p {
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    /* TODO: échanger les deux pour le lightmode*/
+    color: white;
+    /*color: #000000;*/
+}
+
+@media screen and (max-width: 1300px) {
+    .body {
+        width: 965px;
+        margin-left: 50px;
+    }
+
+    .top {
+        margin-left: 50px;
+        width: 965px;
+    }
+
+    .left {
+        height: 590px;
+    }
+}

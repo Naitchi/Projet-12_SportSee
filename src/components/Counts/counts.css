@@ -1,0 +1,96 @@
+.counts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    gap: 39px;
+}
+
+.counts .count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
+    height: 124px;
+    width: 258px;
+    border-radius: 5px;
+
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+
+.counts .count .icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 6px;
+
+    mix-blend-mode: normal;
+    border-radius: 6px;
+
+    margin-left: 32px;
+}
+
+.counts .count .calories {
+    background: rgba(249, 139, 139, 0.1)
+}
+
+.counts .count .proteines {
+    background: rgba(74, 184, 255, 0.1)
+}
+
+.counts .count .glucides {
+    background: rgba(249, 206, 35, 0.1);
+}
+
+.counts .count .lipides {
+    background: rgba(253, 81, 129, 0.1);
+}
+
+.counts .count .info {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: #282D30;
+    height: 51px;
+
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+}
+
+.counts .count .info .unit {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #74798C;
+    line-height: 0;
+}
+
+@media screen and (max-width: 1300px) {
+    .counts {
+        gap: 31px;
+    }
+
+    .counts .count {
+        width: 158px;
+        gap: 14px;
+    }
+
+    .counts .count .icone {
+        margin-left: 11px;
+    }
+
+    .counts .count .info {
+        font-size: 14px;
+    }
+
+    .counts .count .info .unit {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,25 @@
+.Session {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 263px;
+    width: 258px;
+    border-radius: 5px;
+
+    background-color: #ff0000;
+}
+
+.Session h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    margin-left: 34px;
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}

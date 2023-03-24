@@ -1,0 +1,97 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 91px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  background: #020203;
+
+}
+
+nav div {
+  width: 100%;
+  padding: 0 87px 0 28px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div a {
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
+.sports {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 117px;
+  height: 100vh;
+
+  background: #020203;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sports div {
+  margin: 30vh 0 59px 0;
+  gap: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sports div .list {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.sports div .list .sport {
+  height: 61px;
+  width: 61px;
+  background: #FFFFFF;
+  border-radius: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sports div p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #FFFFFF;
+
+  transform: rotate(-90deg);
+  width: 140px;
+}
+
+@media screen and (max-width: 1300px) {
+  .sports {
+    width: 50px;
+  }
+
+  .sports div .list .sport {
+    height: 41px;
+    width: 41px;
+  }
+}

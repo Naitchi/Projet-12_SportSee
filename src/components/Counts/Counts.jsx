@@ -24,7 +24,6 @@ export default function Counts() {
   useEffect(() => {
     const fetchData = async (id) => {
       const result = await getKeyDataById(id);
-      console.log(result);
       setKeyData(result);
     };
     fetchData(id).catch(console.error);

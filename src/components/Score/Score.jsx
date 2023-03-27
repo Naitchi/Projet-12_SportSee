@@ -9,6 +9,14 @@ import './score.css';
 //Services
 import { getScoreById } from '../../services/user.service.js';
 
+/**
+ * The score component
+ *
+ * The score variable is a {number} between 0 and 100
+ *
+ * this component use the url parameter id {Number} to fetch the user data
+ * @returns the score component
+ */
 function Score() {
   const [score, setScore] = useState(1);
   const { id } = useParams();

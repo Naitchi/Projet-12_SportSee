@@ -1,3 +1,12 @@
+/**
+ * The custom Active Dot component for the Sessions component
+ *
+ * @param {number} cx
+ * @param {number} cy
+ * @param {string} stroke
+ * @param {number} strokeWidth
+ * @returns the custom Active Dot Component
+ */
 const CustomActiveDot = (props) => {
   const { cx, cy, stroke, strokeWidth } = props;
 

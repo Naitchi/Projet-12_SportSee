@@ -12,6 +12,17 @@ import './activity.css';
 // Services
 import { getUserActivityById } from '../../services/user.service.js';
 
+/**
+ * The activity component
+ *
+ * The activity component is a bar chart that display the user activity
+ * this component use the url parameter id {Number} to fetch the user data
+ *
+ * the activity data is an array of object with the following structure:
+ * [{day: {string}, kilogram: {number}, calories: {number}}]
+ *
+ * @returns the activity component
+ */
 function Activity() {
   const [state, setState] = useState({});
   const { id } = useParams();

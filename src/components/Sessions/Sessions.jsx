@@ -13,6 +13,15 @@ import './sessions.css';
 // Services
 import { getUserAverageSession } from '../../services/user.service.js';
 
+/**
+ * The sessions component
+ *
+ * The state variable is an array of object with the following structure:
+ * [{day: {string}, value: {number}}]
+ *
+ * this component use the url parameter id {Number} to fetch the user data
+ * @returns the sessions component
+ */
 function Session() {
   const [state, setState] = useState({});
   const { id } = useParams();

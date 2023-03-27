@@ -16,6 +16,16 @@ import './App.css';
 // Services
 import { getUserById } from '../../services/user.service.js';
 
+/**
+ * The user page
+ *
+ * The user variable is used to display the user name in the top of the page
+ * and is an object with the following structure:
+ * {age:{number}, firstName:{string}, lastName:{string}}
+ *
+ * this component use the url parameter id {Number} to fetch the user data
+ * @returns the user page
+ */
 function App() {
   const [user, setUser] = useState({});
   const { id } = useParams();

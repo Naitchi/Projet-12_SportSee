@@ -5,8 +5,18 @@ import { useParams } from 'react-router-dom';
 // Css
 import './counts.css';
 
+// Services
 import { getKeyDataById } from '../../services/user.service.js';
 
+/**
+ * The counts component
+ *
+ * The keyData variable is an object with the following structure:
+ * {calorieCount:{number}, carbohydrateCount:{number}, proteinCount:{number}, lipidCount:{number}}
+ *
+ * this component use the url parameter id {Number} to fetch the user data
+ * @returns 1 component with stats about the user
+ */
 export default function Counts() {
   const [keyData, setKeyData] = useState({});
   const { id } = useParams();
@@ -14,6 +24,7 @@ export default function Counts() {
   useEffect(() => {
     const fetchData = async (id) => {
       const result = await getKeyDataById(id);
+      console.log(result);
       setKeyData(result);
     };
     fetchData(id).catch(console.error);

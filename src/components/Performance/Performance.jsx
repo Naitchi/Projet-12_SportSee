@@ -9,6 +9,15 @@ import './performance.css';
 //Services
 import { getUserPerformance } from '../../services/user.service.js';
 
+/**
+ * The performance component
+ *
+ * The state variable is an array of object with the following structure:
+ * [{category: {string}, value: {number}}]
+ *
+ * this component use the url parameter id {Number} to fetch the user data
+ * @returns the performance component
+ */
 function Performance() {
   const [state, setState] = useState({});
   const { id } = useParams();

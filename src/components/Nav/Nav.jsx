@@ -1,6 +1,11 @@
 // Css
 import './nav.css';
 
+/**
+ * The nav component display nav and header
+ *
+ * @returns the nav component
+ */
 export default function Nav() {
   return (
     <header>

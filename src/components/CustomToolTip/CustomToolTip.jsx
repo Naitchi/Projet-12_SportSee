@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 // Css
 import './customToolTip.css';
 
@@ -17,5 +19,14 @@ function CustomTooltip({ active, payload }) {
       </div>
     );
 }
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+    }),
+  ),
+};
 
 export default CustomTooltip;

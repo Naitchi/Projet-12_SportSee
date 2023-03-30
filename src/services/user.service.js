@@ -4,7 +4,7 @@
  * @returns {Object}
  */
 export async function getUserById(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/main_data.json', {
       method: 'GET',
       headers: {
@@ -37,7 +37,7 @@ export async function getUserById(id) {
  * @returns {Array}
  */
 export async function getKeyDataById(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/main_data.json', {
       method: 'GET',
       headers: {
@@ -70,7 +70,7 @@ export async function getKeyDataById(id) {
  * @returns {number}
  */
 export async function getScoreById(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/main_data.json', {
       method: 'GET',
       headers: {
@@ -103,7 +103,7 @@ export async function getScoreById(id) {
  * @returns {Array}
  */
 export async function getUserActivityById(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/activity.json', {
       method: 'GET',
       headers: {
@@ -112,7 +112,7 @@ export async function getUserActivityById(id) {
     });
     const data = await response.json();
     if (data.some((item) => item.userId == id)) {
-      return data.find((item) => item.userId == id).sessions;
+      return formatDataActivity(data.find((item) => item.userId == id).sessions);
     }
   } else {
     try {
@@ -123,8 +123,7 @@ export async function getUserActivityById(id) {
         },
       });
       const result = await response.json();
-      console.log(result.data.sessions);
-      return result.data.sessions;
+      return formatDataActivity(result.data.sessions);
     } catch (e) {
       return console.log(JSON.stringify(e));
     }
@@ -137,7 +136,7 @@ export async function getUserActivityById(id) {
  * @returns {Array}
  */
 export async function getUserAverageSession(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/average_sessions.json', {
       method: 'GET',
       headers: {
@@ -170,7 +169,7 @@ export async function getUserAverageSession(id) {
  * @returns {Array}
  */
 export async function getUserPerformance(id) {
-  if (import.meta.env.VITE_MOCK) {
+  if (import.meta.env.VITE_MOCK === 'true') {
     const response = await fetch('./data/performance.json', {
       method: 'GET',
       headers: {
@@ -224,6 +223,22 @@ const formatDataSessions = (data) => {
     return {
       day: dayConverter(item.day),
       value: item.sessionLength,
+    };
+  });
+  return dataFormated;
+};
+
+/**
+ * format data for the average sessions chart
+ * @param {Array} data
+ * @returns {Array}
+ **/
+const formatDataActivity = (data) => {
+  const dataFormated = data.map((item, index) => {
+    return {
+      day: index + 1,
+      kilogram: item.kilogram,
+      calories: item.calories,
     };
   });
   return dataFormated;

@@ -18,8 +18,11 @@ create a file .env in the root of the project and add the following lines
 
     VITE_MOCK="true"
 
-You have to : 
+You have to :
 
     npm install
     npm run dev
 
+Then you can access to the page by entering an id in the url, just like this :
+
+    http://localhost:5173/12

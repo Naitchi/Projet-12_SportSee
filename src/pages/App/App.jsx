@@ -42,8 +42,8 @@ function App() {
     <div className="App">
       <Nav />
       <div className="top">
-        <h1>Bonjour {user && <span className="highlight">{user.firstName}</span>}</h1>
-        <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+        <h1>Bonjour {user && <span className="highlight">{user.firstName}</span>},</h1>
+        <p>Félicitations! Vous avez explosé vos objectifs hier. 👏</p>
       </div>
       <div className="body">
         <div className="left">

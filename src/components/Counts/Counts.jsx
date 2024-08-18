@@ -47,7 +47,7 @@ export default function Counts() {
         </div>
         <div className="info">
           {keyData.proteinCount + 'g'}
-          <p className="unit">Proteines</p>
+          <p className="unit">Protéines</p>
         </div>
       </div>
 

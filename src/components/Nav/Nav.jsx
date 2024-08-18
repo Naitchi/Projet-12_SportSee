@@ -14,9 +14,9 @@ export default function Nav() {
           <a href="">
             <img src="./img/sportsee.svg" alt="SportSee" />
           </a>
-          <a href="">Acceuil</a>
+          <a href="">Accueil</a>
           <a href="">Profil</a>
-          <a href="">Réglage</a>
+          <a href="">Réglages</a>
           <a href="">Communauté</a>
         </div>
       </nav>

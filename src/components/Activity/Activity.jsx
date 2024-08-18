@@ -38,7 +38,7 @@ function Activity() {
   return (
     <div className="activity">
       <div className="header">
-        <h3>Activité quotidiennes</h3>
+        <h3>Activités quotidiennes</h3>
         <div className="legends">
           <div className="legend">
             <div className="dot black"></div>
